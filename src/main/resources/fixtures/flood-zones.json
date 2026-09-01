@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "demo-seoul-jung-flood-001",
+        "name": "서울 중구 시연용 침수 위험구역",
+        "source": "LOCAL_DEMO",
+        "depthClass": "0.5m 이하",
+        "active": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [126.980, 37.5695],
+            [126.9885, 37.5695],
+            [126.9885, 37.5668],
+            [126.980, 37.5668],
+            [126.980, 37.5695]
+          ]
+        ]
+      }
+    }
+  ]
+}

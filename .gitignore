@@ -1,0 +1,14 @@
+.gradle/
+build/
+.idea/
+*.iml
+.env
+.env.local
+!.env.example
+
+# Local Firebase and service-account credentials
+google-services.json
+service-account*.json
+*service-account*.json
+firebase-adminsdk*.json
+*credentials*.json

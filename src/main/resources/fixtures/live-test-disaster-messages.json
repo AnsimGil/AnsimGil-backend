@@ -1,0 +1,11 @@
+[
+  {
+    "id": "live-test-seoul-jung-flood-001",
+    "receivedAt": "2026-08-30T12:00:00+09:00",
+    "type": "호우",
+    "title": "안전안내",
+    "message": "[안심길 테스트] 서울 중구에 호우로 인한 침수 위험이 발생했습니다. 하천변과 저지대 접근을 자제하세요.",
+    "region": "서울특별시 중구",
+    "source": "LIVE_TEST_FIXTURE"
+  }
+]

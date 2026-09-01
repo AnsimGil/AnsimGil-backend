@@ -1,0 +1,49 @@
+{
+  "normal": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "routeType": "NORMAL",
+          "source": "LOCAL_FIXTURE"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [126.9780, 37.5665],
+            [126.9800, 37.5672],
+            [126.9840, 37.5680],
+            [126.9880, 37.5680],
+            [126.9895, 37.5690],
+            [126.9920, 37.5705]
+          ]
+        }
+      }
+    ]
+  },
+  "safe": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "routeType": "SAFE",
+          "source": "LOCAL_FIXTURE",
+          "avoids": "demo-seoul-jung-flood-001"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [126.9780, 37.5665],
+            [126.9790, 37.5660],
+            [126.9895, 37.5660],
+            [126.9900, 37.5685],
+            [126.9910, 37.5695],
+            [126.9920, 37.5705]
+          ]
+        }
+      }
+    ]
+  }
+}

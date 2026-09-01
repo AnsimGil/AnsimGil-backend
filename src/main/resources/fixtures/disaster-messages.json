@@ -1,0 +1,20 @@
+[
+  {
+    "id": "demo-flood-001",
+    "receivedAt": "2026-08-30T09:00:00+09:00",
+    "type": "FLOOD",
+    "title": "호우·침수 안전 안내",
+    "message": "서울 중구 일부 지역에 침수 위험이 있습니다. 하천변과 저지대 접근을 자제하세요.",
+    "region": "서울특별시 중구",
+    "source": "LOCAL_FIXTURE"
+  },
+  {
+    "id": "demo-rain-001",
+    "receivedAt": "2026-08-30T09:05:00+09:00",
+    "type": "HEAVY_RAIN",
+    "title": "호우 특보 안내",
+    "message": "강한 비가 예상됩니다. 외출 시 기상정보와 주변 재난문자를 확인하세요.",
+    "region": "서울특별시",
+    "source": "LOCAL_FIXTURE"
+  }
+]

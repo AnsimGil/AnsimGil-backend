@@ -1,0 +1,57 @@
+spring:
+  config:
+    # 개인 키를 백엔드 레포지토리의 .env.local에서 자동으로 읽습니다.
+    # 파일은 .gitignore에 포함되어 제출물에 들어가지 않습니다.
+    import: optional:file:.env.local[.properties]
+  application:
+    name: ansimgil-backend
+
+server:
+  port: 8080
+
+ors:
+  base-url: ${ORS_BASE_URL:https://api.heigit.org/openrouteservice}
+  api-key: ${ORS_API_KEY:}
+
+places:
+  # LIVE 장소 검색용 키. 제출·Demo 환경에서는 비워 둡니다.
+  base-url: ${GOOGLE_PLACES_BASE_URL:https://places.googleapis.com/v1}
+  api-key: ${GOOGLE_PLACES_API_KEY:}
+  max-results: ${GOOGLE_PLACES_MAX_RESULTS:5}
+
+flood-map:
+  # M7은 키 없이도 재현되도록 로컬 fixture를 기본값으로 사용합니다.
+  # live는 개인 시연용 공식 WMS 연결 모드입니다.
+  mode: ${FLOOD_MAP_MODE:demo}
+  wms-url: ${FLOOD_MAP_WMS_URL:https://data.floodmap.go.kr/api/wms-service/adm-cty-wms}
+  layer: ${FLOOD_MAP_WMS_LAYER:}
+  service-key: ${FLOOD_MAP_SERVICE_KEY:}
+  frequency: ${FLOOD_MAP_FREQ:100}
+  administrative-area-code: ${FLOOD_MAP_ADMIN_CODE:11100}
+  depth-code: ${FLOOD_MAP_SEG_CODE:}
+  srs: ${FLOOD_MAP_SRS:EPSG:4326}
+
+disaster-data:
+  # M4는 기본적으로 외부 호출 없이 fixture를 사용합니다.
+  base-url: ${DISASTER_DATA_BASE_URL:https://www.safetydata.go.kr}
+  service-key: ${DISASTER_DATA_SERVICE_KEY:}
+  interface-id: ${DISASTER_DATA_INTERFACE_ID:DSSP-IF-00247}
+  use-live: ${DISASTER_DATA_USE_LIVE:false}
+  max-rows: ${DISASTER_DATA_MAX_ROWS:20}
+  lookback-days: ${DISASTER_DATA_LOOKBACK_DAYS:1}
+
+kma-weather:
+  # M6.5는 기본적으로 fixture를 사용해 키 없이도 재현할 수 있습니다.
+  base-url: ${KMA_WEATHER_BASE_URL:https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0}
+  service-key: ${KMA_WEATHER_SERVICE_KEY:}
+  use-live: ${KMA_WEATHER_USE_LIVE:false}
+  num-of-rows: ${KMA_WEATHER_NUM_OF_ROWS:1000}
+
+m10:
+  # 제출·재현 환경의 기본값은 외부 키가 필요 없는 모드입니다.
+  route-mode: ${ANSIMGIL_M10_ROUTE_MODE:demo}
+  data-mode: ${ANSIMGIL_M10_DATA_MODE:demo}
+  push-mode: ${ANSIMGIL_M10_PUSH_MODE:demo}
+
+expo-push:
+  base-url: ${EXPO_PUSH_BASE_URL:https://exp.host/--/api/v2/push/send}
